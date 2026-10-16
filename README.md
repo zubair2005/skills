@@ -1,10 +1,15 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zubair2005/skills/main/assets/qiyas-banner-dark.png">
+  <img alt="qiyas: stop repeating yourself to your coding agents" src="https://raw.githubusercontent.com/zubair2005/skills/main/assets/qiyas-banner-light.png">
+</picture>
+
 # Skills
 
-Public AI agent skills by [zubair2005](https://github.com/zubair2005).
+Agent skills for people who run a lot of coding agents.
 
-## Available skills
-
-- [`qiyas`](./qiyas/): reuses your earlier decisions by careful analogy, so your agent asks you fewer repeated questions and makes better calls when it acts alone. Built on qiyas (قياس) from usul al-fiqh.
+| Skill | Load it when |
+|---|---|
+| [qiyas](./qiyas/) | you're bored of repeating yourself to your agents, or you're setting one off on a long task and don't want it stopping to ask something you've already decided |
 
 ## Install
 
@@ -14,20 +19,13 @@ In Codex, ask the built-in installer:
 $skill-installer install https://github.com/zubair2005/skills/tree/main/qiyas
 ```
 
-Any other agent that supports skills can install it from the link:
+In Claude Code, copy the `qiyas` folder into `~/.claude/skills/`. Any other agent that supports skills can install it from the link:
 
 ```text
 Install the AI agent skill at https://github.com/zubair2005/skills/tree/main/qiyas
 ```
 
-Or clone this repo and copy the skill folder into your agent's skills folder:
-
-```bash
-git clone https://github.com/zubair2005/skills.git
-cp -R skills/qiyas ~/.codex/skills/
-```
-
-For Claude Code, copy it to `~/.claude/skills/` instead. The [qiyas README](./qiyas/) covers recommended usage.
+The [qiyas README](./qiyas/) shows how it works, where it looks, what it won't do, and how to make it the default.
 
 ## License
 
