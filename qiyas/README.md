@@ -6,6 +6,8 @@ It is inspired by qiyas, the method of analogy in usul al-fiqh (the principles o
 
 ## What it does
 
+It looks in your `AGENTS.md` or `CLAUDE.md`, memory notes, past Codex and Claude Code chats, and pull requests, reading your own messages and corrections first.
+
 For a decision that matters, it keeps a short evidence record:
 
 1. Asl, the earlier case: link or thread ID, date and circumstances.
@@ -14,13 +16,20 @@ For a decision that matters, it keeps a short evidence record:
 4. Farʿ, the new case: the current decision and the verified facts.
 5. Differences: anything that changed (product, person, environment, timing, reversibility, stakes, authority) and could break the analogy.
 
-When the reason carries over and the choice is safe and reversible, it goes ahead and tells you the choice in one sentence. When it can't establish the reason, it asks you one precise question with its recommendation, and keeps working on anything that doesn't depend on the answer.
+When the reason carries over and the choice is safe and reversible, it goes ahead and tells you in one line:
+
+```text
+Qiyas: following your 3 Oct decision in "Fix login" (ticket ID in branch names), since this is the same repo.
+```
+
+When it can't establish the reason, it asks you one precise question with its recommendation, and keeps working on anything that doesn't depend on the answer.
 
 ## Limits it keeps
 
 - An explicit instruction that still fits applies directly, and a newer instruction beats an older one.
 - Two independent matching decisions from you can set a working default, but only for safe, reversible choices. Assistant summaries and guesses never count as precedents.
 - A past approval to deploy, merge, publish, spend money, change a customer account or delete data never authorizes a new one.
+- A restriction carries over to riskier cases: if you blocked merging without tests, it won't deploy without tests either. A permission never stretches that way.
 - An instruction tied to an event expires with the event.
 
 ## Install
