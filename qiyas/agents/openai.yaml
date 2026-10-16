@@ -1,0 +1,6 @@
+interface:
+  display_name: "Qiyas"
+  short_description: "Recover intent and test decisions against past choices"
+  default_prompt: "Use $qiyas to recover my intent from relevant history and test which prior decisions apply to this task."
+policy:
+  allow_implicit_invocation: true
